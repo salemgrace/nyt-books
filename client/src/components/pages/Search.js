@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Form from "../layout/Form";
+import Jumbotron from "../layout/Jumbotron";
+import Results from "../layout/Results";
 
 class Search extends Component {
   state = {
@@ -11,7 +14,9 @@ class Search extends Component {
   render() {
     return (
         <div>
-            <h2>SEARCH BOOK</h2>
+        <Jumbotron />
+        <Form />
+        <Results />
         </div>
     );
   }

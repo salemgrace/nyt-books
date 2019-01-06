@@ -1,23 +1,21 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Saved from "./pages/Saved";
-import Search from "./pages/Search";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Saved from "./components/pages/Saved";
+import Search from "./components/pages/Search";
+import NavBar from "./components/NavBar";
+import Wrapper from "./components/Wrapper";
 import "./App.css";
 
 function App() {
-    return (
-      <Router>
+  return (
+    <Router>
       <div className="App">
-      <div className="App-header">
-          <h2>Let's Search for Books!</h2>
-        </div>
-      <Switch>
+      <NavBar />
+      <Wrapper>
         <Route exact path="/" component={Search} />
-        <Route exact path="/books" component={Saved} />
-      </Switch>
-        <p className="App-intro">
-          To search do...
-        </p>
+        <Route exact path="/search" component={Search} />
+        <Route exact path="/saved" component={Saved} />
+      </Wrapper>
       </div>
       </Router>
     );

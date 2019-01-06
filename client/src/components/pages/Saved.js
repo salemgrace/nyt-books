@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Search extends Component {
+class Saved extends Component {
   state = {
     books: [],
     title: "",
@@ -17,4 +17,4 @@ class Search extends Component {
   }
 }
 
-export default Search;
+export default Saved;
