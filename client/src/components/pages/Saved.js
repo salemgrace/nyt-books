@@ -1,17 +1,20 @@
 import React, { Component } from "react";
+import Jumbotron from "../layout/Jumbotron";
+import Results from "../layout/Results";
+import Container from "../layout/Container";
 
 class Saved extends Component {
   state = {
-    books: [],
-    title: "",
-    author: "",
-    description: ""
+    results: []
   };
 
   render() {
     return (
-        <div>
-            <h2>SAVE BOOK</h2>
+      <div>
+        <Container>
+          <Jumbotron />
+        <Results results={this.state.results} />
+        </Container>
         </div>
     );
   }

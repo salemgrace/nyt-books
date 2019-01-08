@@ -2,8 +2,8 @@ import axios from "axios";
 
 export default {
   // Gets all books
-  getBooks: function() {
-    return axios.get("/api/books");
+  getBooks: function(search) {
+    return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + search + "&orderBy=newest&key=AIzaSyA5ZeXM9NOo9rBUxIQPQqFXRqdAPByW8QQ");
   },
   // Gets the book with the given id
   getBook: function(id) {

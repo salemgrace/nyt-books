@@ -1,19 +1,17 @@
 import React from "react";
 import "./style.css";
 
-const Form = props => (
+function Form(props) {
+  return(
     <form className="search">
       <div className="form-group">
-        <h4 className="search-title">Type in a Book Name</h4>
+      <label>Let's find some Books to feed our Worms...</label>
         <input
           value={props.search}
           onChange={props.handleInputChange}
-          name="book"
-          list="books"
           type="text"
           className="form-control"
           placeholder="Waiting..."
-          id="book"
         />
         <button
           type="submit"
@@ -24,6 +22,6 @@ const Form = props => (
         </button>
       </div>
     </form>
-  );
+)}
   
   export default Form;
